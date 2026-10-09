@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSK 3.0 话题大纲 · Тематический перечень HSK 3.0</title>
+<style>
+:root{--p:#2c5f7c;--d:#1a3a5c;--l:#eef3f8;--b:#cdd9e3;--a:#e8f0f5;--soft:#f7fafc;--ink:#2b3440;--muted:#6b7684;--grad:linear-gradient(135deg,#1a3a5c,#2c5f7c 55%,#3d7ea6);--shadow:0 2px 8px rgba(26,58,92,.08),0 8px 24px rgba(26,58,92,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif;color:var(--ink);background:radial-gradient(1200px 520px at 50% -120px,#e2ecf4 0%,var(--l) 62%);line-height:1.65}
+.container{max-width:1400px;margin:0 auto;padding:24px 20px 90px}
+h1{color:var(--d);text-align:center;margin:18px 0 6px;font-size:2em;letter-spacing:.5px;font-weight:800}
+h1::after{content:"";display:block;width:120px;height:4px;margin:14px auto 0;border-radius:4px;background:var(--grad)}
+.subtitle{text-align:center;color:var(--muted);font-size:.95em;margin:8px 0 6px;font-style:italic}
+h3{color:var(--d);margin:0 0 14px;font-size:1.15em;display:flex;align-items:center;gap:10px}
+h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--b),transparent)}
+.toc{background:#fff;border:1px solid var(--b);border-radius:12px;padding:22px 24px;margin:22px 0 26px;box-shadow:var(--shadow)}
+.toc ul{list-style:none;columns:3;column-gap:24px}
+.toc li{margin:4px 0;break-inside:avoid}
+.toc a{color:var(--p);text-decoration:none;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 9px;border-radius:7px;transition:all .18s;font-size:.94em}
+.toc a:hover{background:var(--a);color:var(--d);transform:translateX(3px)}
+.toc a .n{background:var(--d);color:#fff;font-size:.72em;font-weight:600;padding:1px 9px;border-radius:20px;flex-shrink:0}
+.section{margin:22px 0;padding:24px 22px;background:#fff;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(208,220,229,.55)}
+h2{color:var(--d);margin:0 0 6px;font-size:1.35em;padding:10px 14px;border-left:5px solid var(--p);background:linear-gradient(90deg,var(--a),#fff 85%);border-radius:0 10px 10px 0}
+.ru-h2{font-weight:400;font-style:italic;color:var(--muted);font-size:.72em;margin-left:8px}
+.desc{color:var(--muted);font-size:.9em;margin:8px 0 14px 4px}
+.n{display:inline-block;background:var(--a);color:var(--p);border-radius:20px;padding:1px 9px;font-size:.78em;font-weight:600;line-height:1.55}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--b);box-shadow:0 1px 4px rgba(26,58,92,.05)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:780px}
+thead th{background:var(--grad);color:#fff;padding:10px 10px;text-align:left;font-weight:600;font-size:.85em;letter-spacing:.3px;white-space:nowrap;border:none}
+td{padding:8px 10px;border-bottom:1px solid var(--b);font-size:.84em;vertical-align:top;text-align:left;transition:background .15s}
+td:first-child{text-align:center;color:var(--muted);font-weight:600;white-space:nowrap}
+tbody tr:nth-child(even){background:var(--soft)}
+tbody tr:hover{background:#e3eef7}
+.word{font-weight:700;color:var(--d);font-size:.98em}
+.ru{color:#5a6780;font-style:italic;font-size:.92em}
+.back-top{display:inline-block;margin:14px 2px 0;color:var(--p);text-decoration:none;font-size:.85em;padding:6px 15px;border:1px solid var(--b);border-radius:20px;background:var(--soft);transition:all .18s}
+.back-top:hover{background:var(--p);color:#fff;border-color:var(--p)}
+.btn-pdf{position:fixed;bottom:28px;right:28px;background:var(--grad);color:#fff;border:none;padding:13px 26px;border-radius:50px;cursor:pointer;font-size:.98em;display:flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(26,58,92,.35);z-index:999;transition:all .2s}
+.btn-pdf:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(26,58,92,.42)}
+.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--d);color:#fff;padding:12px 30px;border-radius:10px;z-index:1000;opacity:0;transition:opacity .4s;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+@media(max-width:768px){.container{padding:12px 10px 80px}.toc ul{columns:1}h1{font-size:1.5em}.section{padding:16px 12px}table{min-width:680px}th,td{padding:6px 6px;font-size:.8em}}
+@media print{
+@page{size:A4;margin:1.5cm}
+body{background:#fff}
+.btn-pdf,.toast,.back-top{display:none!important}
+.section{box-shadow:none;border:1px solid #d8dee5;page-break-inside:avoid}
+.tbl-wrap{overflow:visible;border:none;box-shadow:none}
+table{min-width:0}
+thead{display:table-header-group}
+tr{page-break-inside:avoid}
+h2{page-break-after:avoid}
+.toc{page-break-after:always}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>HSK 3.0 话题大纲</h1>
+<div class="subtitle">Тематический перечень HSK 3.0 · 中文—俄语对照 (китайско-русский)</div>
+<div id="toast" class="toast">正在保存 PDF…</div>
+<button class="btn-pdf" onclick="savePdf()">📄 保存 PDF / Сохранить PDF</button>
+<div class="toc" id="toc">
+<h3>目录 Содержание</h3>
+<ul>
+<li><a href='#lv_1'>基本信息 — Основная информация <span class='n'>(13)</span></a></li>
+<li><a href='#lv_2'>日常生活 — Повседневная жизнь <span class='n'>(70)</span></a></li>
+<li><a href='#lv_3'>教育情况 — Образование; учёба <span class='n'>(30)</span></a></li>
+<li><a href='#lv_4'>职场生活 — Профессиональная жизнь; трудовая деятельность <span class='n'>(30)</span></a></li>
+<li><a href='#lv_5'>文化与传统 — Культура и традиции <span class='n'>(126)</span></a></li>
+<li><a href='#lv_6'>自然与环境 — Природа и окружающая среда <span class='n'>(28)</span></a></li>
+<li><a href='#lv_7'>当代社会 — Современное общество <span class='n'>(21)</span></a></li>
+<li><a href='#lv_8'>科学技术 — Наука и техника <span class='n'>(58)</span></a></li>
+<li><a href='#lv_9'>个体与社会 — Личность и общество <span class='n'>(25)</span></a></li>
+<li><a href='#lv_10'>国家与社会 — Государство и общество <span class='n'>(26)</span></a></li>
+</ul>
+</div>
+<div class='section' id='lv_1'>
+<h2>基本信息 <span class='ru-h2'>Основная информация</span></h2>
+<p class='desc'><span class='n'>13</span> 条三级话题 | 13 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>1</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>个人信息</td><td class='ru'>Личные данные; сведения о себе</td><td>姓名、国籍、年龄、性别、喜好、习惯等</td><td class='ru'>имя, гражданство, возраст, пол, увлечения, привычки и т.п.</td></tr>
+<tr><td>2</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>个人信息</td><td class='ru'>Личные данные; сведения о себе</td><td>身份、家庭成员、朋友、技能等</td><td class='ru'>личность, члены семьи, друзья, навыки и т.п.</td></tr>
+<tr><td>3</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>事件信息</td><td class='ru'>Информация о событиях</td><td>日期、时间、地点、方位、参加者、号码等</td><td class='ru'>дата, время, место, направление, участники, номер и т.п.</td></tr>
+<tr><td>4</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>物品信息</td><td class='ru'>Информация о предметах</td><td>物品名称</td><td class='ru'>названия предметов</td></tr>
+<tr><td>5</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>物品信息</td><td class='ru'>Информация о предметах</td><td>物品特征</td><td class='ru'>особенности предметов</td></tr>
+<tr><td>6</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>环境信息</td><td class='ru'>Информация об окружающей среде</td><td>天气</td><td class='ru'>погода</td></tr>
+<tr><td>7</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>环境信息</td><td class='ru'>Информация об окружающей среде</td><td>环境特点</td><td class='ru'>характеристики окружающей среды</td></tr>
+<tr><td>8</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>基本礼貌行为</td><td class='ru'>основные вежливые манеры поведения</td></tr>
+<tr><td>9</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>简单互动行为</td><td class='ru'>простые интерактивные действия</td></tr>
+<tr><td>10</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>意愿感受</td><td class='ru'>желания и ощущения</td></tr>
+<tr><td>11</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>食物饮品</td><td class='ru'>продукты питания и напитки</td></tr>
+<tr><td>12</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>就餐</td><td class='ru'>приём пищи; посещение столовой (кафе)</td></tr>
+<tr><td>13</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>问路</td><td class='ru'>как спросить дорогу</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_2'>
+<h2>日常生活 <span class='ru-h2'>Повседневная жизнь</span></h2>
+<p class='desc'><span class='n'>70</span> 条三级话题 | 70 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>14</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行方式</td><td class='ru'>способы передвижения</td></tr>
+<tr><td>15</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行安排</td><td class='ru'>организация поездки</td></tr>
+<tr><td>16</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品名称</td><td class='ru'>название товара</td></tr>
+<tr><td>17</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品价格</td><td class='ru'>цена товара</td></tr>
+<tr><td>18</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品选购</td><td class='ru'>выбор и покупка товаров</td></tr>
+<tr><td>19</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>生病、看病、探病等</td><td class='ru'>болезнь, посещение врача, посещение больного и т.п.</td></tr>
+<tr><td>20</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲活动</td><td class='ru'>досуговые занятия; развлечения</td></tr>
+<tr><td>21</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>课程信息</td><td class='ru'>информация о курсах</td></tr>
+<tr><td>22</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习内容</td><td class='ru'>содержание обучения</td></tr>
+<tr><td>23</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>教育层次</td><td class='ru'>уровни образования</td></tr>
+<tr><td>24</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>25</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>课后活动</td><td class='ru'>внеурочные занятия</td></tr>
+<tr><td>26</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>工作情况</td><td class='ru'>Работа; трудовая ситуация</td><td>工作信息</td><td class='ru'>информация о работе</td></tr>
+<tr><td>27</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>工作情况</td><td class='ru'>Работа; трудовая ситуация</td><td>工作评价</td><td class='ru'>оценка работы</td></tr>
+<tr><td>28</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业</td><td class='ru'>Профессия; специальность</td><td>职业种类</td><td class='ru'>виды профессий</td></tr>
+<tr><td>29</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>中餐</td><td class='ru'>китайская кухня</td></tr>
+<tr><td>30</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>传统饮品</td><td class='ru'>традиционные напитки</td></tr>
+<tr><td>31</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>个人信息</td><td class='ru'>Личные данные; сведения о себе</td><td>外貌、穿着、生日等</td><td class='ru'>внешность, одежда, день рождения и т.п.</td></tr>
+<tr><td>32</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>个人信息</td><td class='ru'>Личные данные; сведения о себе</td><td>身份、习惯、爱好、来处等</td><td class='ru'>личность, привычки, увлечения, место происхождения и т.п.</td></tr>
+<tr><td>33</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>事件信息</td><td class='ru'>Информация о событиях</td><td>事件、人物、时间、方式、地址、原因、变化、状态等</td><td class='ru'>события, люди, время, способ, адрес, причина, изменения, состояние и т.п.</td></tr>
+<tr><td>34</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>物品信息</td><td class='ru'>Информация о предметах</td><td>名称、颜色、差别、数量、所在、特点等</td><td class='ru'>название, цвет, различия, количество, местонахождение, особенности и т.п.</td></tr>
+<tr><td>35</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>环境信息</td><td class='ru'>Информация об окружающей среде</td><td>天气</td><td class='ru'>погода</td></tr>
+<tr><td>36</td><td class='word'>基本信息</td><td class='ru'>Основная информация</td><td>环境信息</td><td class='ru'>Информация об окружающей среде</td><td>环境特征</td><td class='ru'>особенности окружающей среды</td></tr>
+<tr><td>37</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>基本礼貌行为</td><td class='ru'>основные вежливые манеры поведения</td></tr>
+<tr><td>38</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>简单互动行为</td><td class='ru'>простые интерактивные действия</td></tr>
+<tr><td>39</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>意愿感受</td><td class='ru'>желания и ощущения</td></tr>
+<tr><td>40</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>食物饮品</td><td class='ru'>продукты питания и напитки</td></tr>
+<tr><td>41</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>饮食习惯</td><td class='ru'>привычки в еде</td></tr>
+<tr><td>42</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>就餐</td><td class='ru'>приём пищи; посещение столовой (кафе)</td></tr>
+<tr><td>43</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>问路</td><td class='ru'>как спросить дорогу</td></tr>
+<tr><td>44</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行方式</td><td class='ru'>способы передвижения</td></tr>
+<tr><td>45</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行安排</td><td class='ru'>организация поездки</td></tr>
+<tr><td>46</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行感受</td><td class='ru'>впечатления от поездки</td></tr>
+<tr><td>47</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品选购</td><td class='ru'>выбор и покупка товаров</td></tr>
+<tr><td>48</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品描述</td><td class='ru'>описание товара</td></tr>
+<tr><td>49</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>生病</td><td class='ru'>заболевание; болезнь</td></tr>
+<tr><td>50</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>就医</td><td class='ru'>обращение за медицинской помощью</td></tr>
+<tr><td>51</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲活动</td><td class='ru'>досуговые занятия; развлечения</td></tr>
+<tr><td>52</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲安排</td><td class='ru'>организация досуга</td></tr>
+<tr><td>53</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>家庭生活</td><td class='ru'>Семейная жизнь</td><td>家庭关系</td><td class='ru'>семейные отношения</td></tr>
+<tr><td>54</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>家庭生活</td><td class='ru'>Семейная жизнь</td><td>家庭活动</td><td class='ru'>семейные мероприятия</td></tr>
+<tr><td>55</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>基本情况</td><td class='ru'>основные сведения; общая ситуация</td></tr>
+<tr><td>56</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习经历</td><td class='ru'>учебный опыт</td></tr>
+<tr><td>57</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>58</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>课后活动</td><td class='ru'>внеурочные занятия</td></tr>
+<tr><td>59</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>工作情况</td><td class='ru'>Работа; трудовая ситуация</td><td>工作信息</td><td class='ru'>информация о работе</td></tr>
+<tr><td>60</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>工作情况</td><td class='ru'>Работа; трудовая ситуация</td><td>工作经历、工作感受</td><td class='ru'>опыт работы и впечатления от работы</td></tr>
+<tr><td>61</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业</td><td class='ru'>Профессия; специальность</td><td>职业状况</td><td class='ru'>профессиональное положение</td></tr>
+<tr><td>62</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统习俗</td><td class='ru'>Традиции и обычаи</td><td>节日</td><td class='ru'>праздники</td></tr>
+<tr><td>63</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>中餐印象</td><td class='ru'>впечатление о китайской кухне</td></tr>
+<tr><td>64</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>姓氏文化</td><td class='ru'>Культура фамилий</td><td>主要姓氏、正式称谓等</td><td class='ru'>основные фамилии, официальные обращения и т.п.</td></tr>
+<tr><td>65</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>个人情况</td><td class='ru'>Личное положение; сведения о человеке</td><td>个人信息</td><td class='ru'>личные данные; сведения о себе</td></tr>
+<tr><td>66</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>个人情况</td><td class='ru'>Личное положение; сведения о человеке</td><td>个人特征</td><td class='ru'>индивидуальные особенности; черты характера</td></tr>
+<tr><td>67</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>事务处理</td><td class='ru'>ведение дел; урегулирование вопросов</td></tr>
+<tr><td>68</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>业务办理</td><td class='ru'>решение дел; оформление процедур</td></tr>
+<tr><td>69</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>礼貌行为</td><td class='ru'>вежливое поведение</td></tr>
+<tr><td>70</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>意愿感受</td><td class='ru'>желания и ощущения</td></tr>
+<tr><td>71</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>食物饮品</td><td class='ru'>продукты питания и напитки</td></tr>
+<tr><td>72</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>饮食习惯</td><td class='ru'>привычки в еде</td></tr>
+<tr><td>73</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>就餐</td><td class='ru'>приём пищи; посещение столовой (кафе)</td></tr>
+<tr><td>74</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行方式</td><td class='ru'>способы передвижения</td></tr>
+<tr><td>75</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行安排</td><td class='ru'>организация поездки</td></tr>
+<tr><td>76</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行经历</td><td class='ru'>опыт путешествий</td></tr>
+<tr><td>77</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>交通规则</td><td class='ru'>правила дорожного движения</td></tr>
+<tr><td>78</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品选购</td><td class='ru'>выбор и покупка товаров</td></tr>
+<tr><td>79</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>购物经历</td><td class='ru'>история покупок</td></tr>
+<tr><td>80</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>生病</td><td class='ru'>заболевание; болезнь</td></tr>
+<tr><td>81</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>就医</td><td class='ru'>обращение за медицинской помощью</td></tr>
+<tr><td>82</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>探病</td><td class='ru'>посещение больного</td></tr>
+<tr><td>83</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>健康观念</td><td class='ru'>представления о здоровье</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_3'>
+<h2>教育情况 <span class='ru-h2'>Образование; учёба</span></h2>
+<p class='desc'><span class='n'>30</span> 条三级话题 | 30 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>84</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲活动</td><td class='ru'>досуговые занятия; развлечения</td></tr>
+<tr><td>85</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>活动体验</td><td class='ru'>впечатления от мероприятия</td></tr>
+<tr><td>86</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居住情况</td><td class='ru'>жилищные условия</td></tr>
+<tr><td>87</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>生活习惯</td><td class='ru'>жизненные привычки</td></tr>
+<tr><td>88</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>家庭关系</td><td class='ru'>семейные отношения</td></tr>
+<tr><td>89</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>家庭事务</td><td class='ru'>семейные дела</td></tr>
+<tr><td>90</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居家生活</td><td class='ru'>домашняя жизнь</td></tr>
+<tr><td>91</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>课程情况</td><td class='ru'>ситуация с курсами</td></tr>
+<tr><td>92</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习活动</td><td class='ru'>учебные мероприятия</td></tr>
+<tr><td>93</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习环境</td><td class='ru'>учебная среда</td></tr>
+<tr><td>94</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习经历</td><td class='ru'>учебный опыт</td></tr>
+<tr><td>95</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>校园活动</td><td class='ru'>мероприятия в кампусе</td></tr>
+<tr><td>96</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>97</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>家庭教育</td><td class='ru'>семейное воспитание</td></tr>
+<tr><td>98</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>办公事务</td><td class='ru'>офисные дела</td></tr>
+<tr><td>99</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>工作表现</td><td class='ru'>рабочие показатели; отношение к работе</td></tr>
+<tr><td>100</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>工作环境</td><td class='ru'>рабочая среда</td></tr>
+<tr><td>101</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>同事相处</td><td class='ru'>отношения с коллегами</td></tr>
+<tr><td>102</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>工作经历</td><td class='ru'>опыт работы</td></tr>
+<tr><td>103</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>职业评价</td><td class='ru'>оценка профессий</td></tr>
+<tr><td>104</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>气候</td><td class='ru'>климат</td></tr>
+<tr><td>105</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>季节</td><td class='ru'>времена года; сезоны</td></tr>
+<tr><td>106</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>动植物</td><td class='ru'>животные и растения</td></tr>
+<tr><td>107</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然风景</td><td class='ru'>природные пейзажи</td></tr>
+<tr><td>108</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境状况</td><td class='ru'>состояние окружающей среды</td></tr>
+<tr><td>109</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境保护</td><td class='ru'>охрана окружающей среды</td></tr>
+<tr><td>110</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会情况</td><td class='ru'>Общественное положение</td><td>现代生活</td><td class='ru'>современная жизнь</td></tr>
+<tr><td>111</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会情况</td><td class='ru'>Общественное положение</td><td>城市发展</td><td class='ru'>развитие городов</td></tr>
+<tr><td>112</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺活动</td><td class='ru'>литературно-художественные мероприятия</td></tr>
+<tr><td>113</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>运动项目</td><td class='ru'>виды спорта</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_4'>
+<h2>职场生活 <span class='ru-h2'>Профессиональная жизнь; трудовая деятельность</span></h2>
+<p class='desc'><span class='n'>30</span> 条三级话题 | 30 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>114</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育比赛</td><td class='ru'>спортивные соревнования</td></tr>
+<tr><td>115</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>特色饮食</td><td class='ru'>характерная местная кухня</td></tr>
+<tr><td>116</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>餐具</td><td class='ru'>столовая посуда</td></tr>
+<tr><td>117</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>风俗传统</td><td class='ru'>Обычаи и традиции</td><td>传统节日与习俗</td><td class='ru'>традиционные праздники и обычаи</td></tr>
+<tr><td>118</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>风俗传统</td><td class='ru'>Обычаи и традиции</td><td>地区差异</td><td class='ru'>региональные различия</td></tr>
+<tr><td>119</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>个人情况</td><td class='ru'>Личное положение; сведения о человеке</td><td>个人信息</td><td class='ru'>личные данные; сведения о себе</td></tr>
+<tr><td>120</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>个人情况</td><td class='ru'>Личное положение; сведения о человеке</td><td>个人特征</td><td class='ru'>индивидуальные особенности; черты характера</td></tr>
+<tr><td>121</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>业务办理</td><td class='ru'>решение дел; оформление процедур</td></tr>
+<tr><td>122</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>困难求助</td><td class='ru'>обращение за помощью в трудной ситуации</td></tr>
+<tr><td>123</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>礼貌行为</td><td class='ru'>вежливое поведение</td></tr>
+<tr><td>124</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>情感</td><td class='ru'>чувства; эмоции</td></tr>
+<tr><td>125</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交往</td><td class='ru'>Общение; межличностные контакты</td><td>感悟</td><td class='ru'>размышления; прозрения; осознание</td></tr>
+<tr><td>126</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>食物饮品</td><td class='ru'>продукты питания и напитки</td></tr>
+<tr><td>127</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>就餐</td><td class='ru'>приём пищи; посещение столовой (кафе)</td></tr>
+<tr><td>128</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>做菜</td><td class='ru'>приготовление пищи</td></tr>
+<tr><td>129</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行经历</td><td class='ru'>опыт путешествий</td></tr>
+<tr><td>130</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>交通</td><td class='ru'>транспорт; дорожное движение</td></tr>
+<tr><td>131</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品选购</td><td class='ru'>выбор и покупка товаров</td></tr>
+<tr><td>132</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>购物体验</td><td class='ru'>опыт покупок</td></tr>
+<tr><td>133</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商家活动</td><td class='ru'>акции и деятельность продавцов</td></tr>
+<tr><td>134</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>就医</td><td class='ru'>обращение за медицинской помощью</td></tr>
+<tr><td>135</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>健康生活</td><td class='ru'>здоровый образ жизни</td></tr>
+<tr><td>136</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲活动</td><td class='ru'>досуговые занятия; развлечения</td></tr>
+<tr><td>137</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>活动感受、看法等</td><td class='ru'>впечатления от мероприятий, мнения и т.п.</td></tr>
+<tr><td>138</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居住情况</td><td class='ru'>жилищные условия</td></tr>
+<tr><td>139</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>社区生活</td><td class='ru'>жизнь сообщества</td></tr>
+<tr><td>140</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>房屋租赁与买卖</td><td class='ru'>аренда, купля и продажа жилья</td></tr>
+<tr><td>141</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居家生活</td><td class='ru'>домашняя жизнь</td></tr>
+<tr><td>142</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>家庭关系</td><td class='ru'>семейные отношения</td></tr>
+<tr><td>143</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>成长过程</td><td class='ru'>процесс взросления</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_5'>
+<h2>文化与传统 <span class='ru-h2'>Культура и традиции</span></h2>
+<p class='desc'><span class='n'>126</span> 条三级话题 | 126 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>144</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>生活习惯</td><td class='ru'>жизненные привычки</td></tr>
+<tr><td>145</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>家庭事务</td><td class='ru'>семейные дела</td></tr>
+<tr><td>146</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>课程情况</td><td class='ru'>ситуация с курсами</td></tr>
+<tr><td>147</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>教学情况</td><td class='ru'>ситуация в преподавании; учебный процесс</td></tr>
+<tr><td>148</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习经历</td><td class='ru'>учебный опыт</td></tr>
+<tr><td>149</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习心得</td><td class='ru'>впечатления и выводы от учёбы</td></tr>
+<tr><td>150</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>校园活动</td><td class='ru'>мероприятия в кампусе</td></tr>
+<tr><td>151</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>152</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>家庭教育</td><td class='ru'>семейное воспитание</td></tr>
+<tr><td>153</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>社会教育</td><td class='ru'>общественное образование</td></tr>
+<tr><td>154</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>办公事务</td><td class='ru'>офисные дела</td></tr>
+<tr><td>155</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>工作表现</td><td class='ru'>рабочие показатели; отношение к работе</td></tr>
+<tr><td>156</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>日常办公</td><td class='ru'>Повседневная офисная работа</td><td>职场交往</td><td class='ru'>общение на рабочем месте</td></tr>
+<tr><td>157</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>工作经历</td><td class='ru'>опыт работы</td></tr>
+<tr><td>158</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>职业现状、职业评价</td><td class='ru'>текущее состояние профессий и их оценка</td></tr>
+<tr><td>159</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>单位情况</td><td class='ru'>Положение на работе; рабочее место</td><td>人事管理</td><td class='ru'>управление кадрами</td></tr>
+<tr><td>160</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>单位情况</td><td class='ru'>Положение на работе; рабочее место</td><td>工作环境与待遇</td><td class='ru'>рабочая среда и условия труда</td></tr>
+<tr><td>161</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>地理</td><td class='ru'>география</td></tr>
+<tr><td>162</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>气候</td><td class='ru'>климат</td></tr>
+<tr><td>163</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>动植物</td><td class='ru'>животные и растения</td></tr>
+<tr><td>164</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然景观</td><td class='ru'>природные ландшафты</td></tr>
+<tr><td>165</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然现象</td><td class='ru'>природные явления</td></tr>
+<tr><td>166</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境状况</td><td class='ru'>состояние окружающей среды</td></tr>
+<tr><td>167</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境保护</td><td class='ru'>охрана окружающей среды</td></tr>
+<tr><td>168</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科技发展</td><td class='ru'>Развитие науки и техники</td><td>新技术运用</td><td class='ru'>применение новых технологий</td></tr>
+<tr><td>169</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科普知识</td><td class='ru'>научно-популярные знания</td></tr>
+<tr><td>170</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科研成果</td><td class='ru'>научные достижения</td></tr>
+<tr><td>171</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>概况</td><td class='ru'>Общие сведения; обзор</td><td>首都、主要省市</td><td class='ru'>столица, основные провинции и города</td></tr>
+<tr><td>172</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>概况</td><td class='ru'>Общие сведения; обзор</td><td>少数民族</td><td class='ru'>национальные меньшинства</td></tr>
+<tr><td>173</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>流行产品</td><td class='ru'>популярные товары</td></tr>
+<tr><td>174</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>新商业形态</td><td class='ru'>новые формы бизнеса</td></tr>
+<tr><td>175</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>经济状况</td><td class='ru'>экономическое положение</td></tr>
+<tr><td>176</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>生活观念</td><td class='ru'>взгляды на жизнь</td></tr>
+<tr><td>177</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>网络生活</td><td class='ru'>жизнь в интернете</td></tr>
+<tr><td>178</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>基础设施</td><td class='ru'>инфраструктура</td></tr>
+<tr><td>179</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>流行事物</td><td class='ru'>модные явления; популярные вещи</td></tr>
+<tr><td>180</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺形式</td><td class='ru'>формы литературы и искусства</td></tr>
+<tr><td>181</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺活动</td><td class='ru'>литературно-художественные мероприятия</td></tr>
+<tr><td>182</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>创作者及其作品</td><td class='ru'>творцы и их произведения</td></tr>
+<tr><td>183</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>运动项目</td><td class='ru'>виды спорта</td></tr>
+<tr><td>184</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育比赛</td><td class='ru'>спортивные соревнования</td></tr>
+<tr><td>185</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育名人、体育故事</td><td class='ru'>знаменитые спортсмены, спортивные истории</td></tr>
+<tr><td>186</td><td class='word'>当代社会</td><td class='ru'>Современное общество</td><td>中外交流</td><td class='ru'>Международный обмен (Китай и зарубежье)</td><td>友好往来</td><td class='ru'>дружественные контакты</td></tr>
+<tr><td>187</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>语言文字</td><td class='ru'>Язык и письменность</td><td>俗语、名言等</td><td class='ru'>поговорки, известные изречения и т.п.</td></tr>
+<tr><td>188</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>传统饮食观念</td><td class='ru'>традиционные представления о питании</td></tr>
+<tr><td>189</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>饮食文化</td><td class='ru'>Культура питания; кулинарная культура</td><td>各地饮食、传统店铺、品牌等</td><td class='ru'>кухня разных регионов, традиционные магазины, бренды и т.п.</td></tr>
+<tr><td>190</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>传统节日与习俗</td><td class='ru'>традиционные праздники и обычаи</td></tr>
+<tr><td>191</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>国粹</td><td class='ru'>национальная классика; жемчужина национальной культуры</td></tr>
+<tr><td>192</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>各地传统</td><td class='ru'>традиции разных регионов</td></tr>
+<tr><td>193</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>人际交往礼仪</td><td class='ru'>этикет межличностного общения</td></tr>
+<tr><td>194</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>人文景观</td><td class='ru'>Культурные достопримечательности</td><td>名胜古迹等</td><td class='ru'>известные достопримечательности и т.п.</td></tr>
+<tr><td>195</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>历史人物、历史事件</td><td class='ru'>исторические личности и события</td></tr>
+<tr><td>196</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>业务办理</td><td class='ru'>решение дел; оформление процедур</td></tr>
+<tr><td>197</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>困难求助</td><td class='ru'>обращение за помощью в трудной ситуации</td></tr>
+<tr><td>198</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>就餐</td><td class='ru'>приём пищи; посещение столовой (кафе)</td></tr>
+<tr><td>199</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>餐饮体验</td><td class='ru'>впечатления от питания в заведении</td></tr>
+<tr><td>200</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>交通运输</td><td class='ru'>транспорт и перевозки</td></tr>
+<tr><td>201</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行体验</td><td class='ru'>опыт поездки; впечатления от поездки</td></tr>
+<tr><td>202</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>商品选购</td><td class='ru'>выбор и покупка товаров</td></tr>
+<tr><td>203</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>购物</td><td class='ru'>Покупки; шопинг</td><td>消费活动</td><td class='ru'>потребительская деятельность</td></tr>
+<tr><td>204</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>就医</td><td class='ru'>обращение за медицинской помощью</td></tr>
+<tr><td>205</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>心理健康</td><td class='ru'>психическое здоровье</td></tr>
+<tr><td>206</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>健康生活</td><td class='ru'>здоровый образ жизни</td></tr>
+<tr><td>207</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>休闲活动</td><td class='ru'>досуговые занятия; развлечения</td></tr>
+<tr><td>208</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>休闲</td><td class='ru'>Отдых; досуг</td><td>活动感受、生活随感、人生感悟等</td><td class='ru'>впечатления от мероприятий, размышления о жизни, жизненные прозрения и т.п.</td></tr>
+<tr><td>209</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居住情况</td><td class='ru'>жилищные условия</td></tr>
+<tr><td>210</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>社区管理</td><td class='ru'>управление сообществом</td></tr>
+<tr><td>211</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>社区生活</td><td class='ru'>жизнь сообщества</td></tr>
+<tr><td>212</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>家庭生活</td><td class='ru'>Семейная жизнь</td><td>居家生活</td><td class='ru'>домашняя жизнь</td></tr>
+<tr><td>213</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>家庭生活</td><td class='ru'>Семейная жизнь</td><td>家庭活动</td><td class='ru'>семейные мероприятия</td></tr>
+<tr><td>214</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>家庭生活</td><td class='ru'>Семейная жизнь</td><td>家庭问题</td><td class='ru'>семейные проблемы</td></tr>
+<tr><td>215</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>课程情况</td><td class='ru'>ситуация с курсами</td></tr>
+<tr><td>216</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>教学情况</td><td class='ru'>ситуация в преподавании; учебный процесс</td></tr>
+<tr><td>217</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习经历</td><td class='ru'>учебный опыт</td></tr>
+<tr><td>218</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习心得</td><td class='ru'>впечатления и выводы от учёбы</td></tr>
+<tr><td>219</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>校园活动</td><td class='ru'>мероприятия в кампусе</td></tr>
+<tr><td>220</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>221</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>家庭教育</td><td class='ru'>семейное воспитание</td></tr>
+<tr><td>222</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>学校教育、社会教育、职业教育等</td><td class='ru'>школьное, общественное, профессиональное образование и т.п.</td></tr>
+<tr><td>223</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>工作内容</td><td class='ru'>содержание работы</td></tr>
+<tr><td>224</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>工作经历</td><td class='ru'>опыт работы</td></tr>
+<tr><td>225</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>团队合作</td><td class='ru'>работа в команде; командное сотрудничество</td></tr>
+<tr><td>226</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>人员管理</td><td class='ru'>управление персоналом</td></tr>
+<tr><td>227</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>企业发展</td><td class='ru'>развитие предприятия</td></tr>
+<tr><td>228</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然资源</td><td class='ru'>природные ресурсы</td></tr>
+<tr><td>229</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>地形地貌</td><td class='ru'>рельеф и ландшафт</td></tr>
+<tr><td>230</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然现象、自然规律</td><td class='ru'>природные явления и законы природы</td></tr>
+<tr><td>231</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>动植物</td><td class='ru'>животные и растения</td></tr>
+<tr><td>232</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>生态平衡</td><td class='ru'>экологическое равновесие</td></tr>
+<tr><td>233</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>城市与乡村</td><td class='ru'>город и деревня</td></tr>
+<tr><td>234</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境保护</td><td class='ru'>охрана окружающей среды</td></tr>
+<tr><td>235</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科技发展</td><td class='ru'>Развитие науки и техники</td><td>产品介绍与应用</td><td class='ru'>представление продукции и её применение</td></tr>
+<tr><td>236</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科普知识</td><td class='ru'>научно-популярные знания</td></tr>
+<tr><td>237</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科研成果</td><td class='ru'>научные достижения</td></tr>
+<tr><td>238</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>概况</td><td class='ru'>Общие сведения; обзор</td><td>行政区划</td><td class='ru'>административно-территориальное деление</td></tr>
+<tr><td>239</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>概况</td><td class='ru'>Общие сведения; обзор</td><td>人口情况</td><td class='ru'>демографическая ситуация</td></tr>
+<tr><td>240</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>概况</td><td class='ru'>Общие сведения; обзор</td><td>时代特征</td><td class='ru'>черты эпохи</td></tr>
+<tr><td>241</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>进出口贸易</td><td class='ru'>экспортно-импортная торговля</td></tr>
+<tr><td>242</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>商业活动</td><td class='ru'>коммерческая деятельность</td></tr>
+<tr><td>243</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>经济发展</td><td class='ru'>экономическое развитие</td></tr>
+<tr><td>244</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>民生发展</td><td class='ru'>развитие благосостояния народа</td></tr>
+<tr><td>245</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>新兴事物</td><td class='ru'>новые явления; новинки</td></tr>
+<tr><td>246</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>社会观念</td><td class='ru'>общественные представления</td></tr>
+<tr><td>247</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>基础设施</td><td class='ru'>инфраструктура</td></tr>
+<tr><td>248</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺形式</td><td class='ru'>формы литературы и искусства</td></tr>
+<tr><td>249</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺常识</td><td class='ru'>общие знания о литературе и искусстве</td></tr>
+<tr><td>250</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>创作者及其作品</td><td class='ru'>творцы и их произведения</td></tr>
+<tr><td>251</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺活动</td><td class='ru'>литературно-художественные мероприятия</td></tr>
+<tr><td>252</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>运动项目</td><td class='ru'>виды спорта</td></tr>
+<tr><td>253</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育赛事</td><td class='ru'>спортивные события; турниры</td></tr>
+<tr><td>254</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育名人、体育故事</td><td class='ru'>знаменитые спортсмены, спортивные истории</td></tr>
+<tr><td>255</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>中外交流</td><td class='ru'>Международный обмен (Китай и зарубежье)</td><td>交往故事、友好访问、国际合作等</td><td class='ru'>истории общения, дружественные визиты, международное сотрудничество и т.п.</td></tr>
+<tr><td>256</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>语言文字</td><td class='ru'>Язык и письменность</td><td>俗语、成语、名言名句等</td><td class='ru'>поговорки, идиомы (чэнъюй), крылатые фразы и т.п.</td></tr>
+<tr><td>257</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>语言文字</td><td class='ru'>Язык и письменность</td><td>语言现象</td><td class='ru'>языковые явления</td></tr>
+<tr><td>258</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>地方饮食及差异等</td><td class='ru'>местная кухня и её различия и т.п.</td></tr>
+<tr><td>259</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>传统节日与习俗</td><td class='ru'>традиционные праздники и обычаи</td></tr>
+<tr><td>260</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>民间传说</td><td class='ru'>народные легенды</td></tr>
+<tr><td>261</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>古代生活</td><td class='ru'>жизнь в древности</td></tr>
+<tr><td>262</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>人文景观</td><td class='ru'>Культурные достопримечательности</td><td>名胜古迹、传统民居、建筑等</td><td class='ru'>достопримечательности, традиционные жилища, архитектура и т.п.</td></tr>
+<tr><td>263</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统思想与艺术</td><td class='ru'>Традиционная мысль и искусство</td><td>哲学思想</td><td class='ru'>философская мысль</td></tr>
+<tr><td>264</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统思想与艺术</td><td class='ru'>Традиционная мысль и искусство</td><td>传统艺术</td><td class='ru'>традиционное искусство</td></tr>
+<tr><td>265</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>历史人物、历史事件</td><td class='ru'>исторические личности и события</td></tr>
+<tr><td>266</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>古代科技</td><td class='ru'>Древняя наука и техника</td><td>古代科技成就</td><td class='ru'>достижения древней науки и техники</td></tr>
+<tr><td>267</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>古代科技</td><td class='ru'>Древняя наука и техника</td><td>古人科学观念、古代科学家事迹</td><td class='ru'>научные представления древних, деятельность древних учёных</td></tr>
+<tr><td>268</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>业务办理</td><td class='ru'>решение дел; оформление процедур</td></tr>
+<tr><td>269</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>日常事务</td><td class='ru'>Повседневные дела</td><td>困难求助</td><td class='ru'>обращение за помощью в трудной ситуации</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_6'>
+<h2>自然与环境 <span class='ru-h2'>Природа и окружающая среда</span></h2>
+<p class='desc'><span class='n'>28</span> 条三级话题 | 28 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>270</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>餐饮体验</td><td class='ru'>впечатления от питания в заведении</td></tr>
+<tr><td>271</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>饮食</td><td class='ru'>Еда и напитки; питание</td><td>食品安全</td><td class='ru'>безопасность пищевых продуктов</td></tr>
+<tr><td>272</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行体验</td><td class='ru'>опыт поездки; впечатления от поездки</td></tr>
+<tr><td>273</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>交通出行</td><td class='ru'>Транспорт и передвижение</td><td>出行攻略</td><td class='ru'>советы по поездке; путеводитель</td></tr>
+<tr><td>274</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>就医</td><td class='ru'>обращение за медицинской помощью</td></tr>
+<tr><td>275</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>医疗健康</td><td class='ru'>Медицина и здоровье</td><td>健康生活</td><td class='ru'>здоровый образ жизни</td></tr>
+<tr><td>276</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居住情况</td><td class='ru'>жилищные условия</td></tr>
+<tr><td>277</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>社区服务</td><td class='ru'>общинные услуги</td></tr>
+<tr><td>278</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>社区管理</td><td class='ru'>управление сообществом</td></tr>
+<tr><td>279</td><td class='word'>日常生活</td><td class='ru'>Повседневная жизнь</td><td>社区</td><td class='ru'>Сообщество; жилой район</td><td>居民生活</td><td class='ru'>жизнь жителей</td></tr>
+<tr><td>280</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>课程情况</td><td class='ru'>ситуация с курсами</td></tr>
+<tr><td>281</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>教学情况</td><td class='ru'>ситуация в преподавании; учебный процесс</td></tr>
+<tr><td>282</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>学习情况</td><td class='ru'>Учёба; учебная деятельность</td><td>学习者</td><td class='ru'>обучающийся; учащийся</td></tr>
+<tr><td>283</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>校园活动</td><td class='ru'>мероприятия в кампусе</td></tr>
+<tr><td>284</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>校园生活</td><td class='ru'>Школьная (студенческая) жизнь</td><td>学校情况</td><td class='ru'>ситуация в школе; сведения о школе</td></tr>
+<tr><td>285</td><td class='word'>教育情况</td><td class='ru'>Образование; учёба</td><td>教育问题</td><td class='ru'>Вопросы образования</td><td>教育事件、教育理念、教育热点问题</td><td class='ru'>образовательные события, педагогические идеи, актуальные вопросы образования</td></tr>
+<tr><td>286</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>工作内容</td><td class='ru'>содержание работы</td></tr>
+<tr><td>287</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>职业与经历</td><td class='ru'>Профессия и опыт работы</td><td>职场定位</td><td class='ru'>позиционирование в профессиональной сфере</td></tr>
+<tr><td>288</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>人员管理</td><td class='ru'>управление персоналом</td></tr>
+<tr><td>289</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>企业发展</td><td class='ru'>развитие предприятия</td></tr>
+<tr><td>290</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>地理分区</td><td class='ru'>географическое деление</td></tr>
+<tr><td>291</td><td class='word'>职场生活</td><td class='ru'>Профессиональная жизнь; трудовая деятельность</td><td>经营与管理</td><td class='ru'>Ведение бизнеса и управление</td><td>地形地貌</td><td class='ru'>рельеф и ландшафт</td></tr>
+<tr><td>292</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然现象</td><td class='ru'>природные явления</td></tr>
+<tr><td>293</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>动植物</td><td class='ru'>животные и растения</td></tr>
+<tr><td>294</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然资源</td><td class='ru'>природные ресурсы</td></tr>
+<tr><td>295</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>自然</td><td class='ru'>Природа</td><td>自然规律</td><td class='ru'>законы природы</td></tr>
+<tr><td>296</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>灾害</td><td class='ru'>стихийные бедствия</td></tr>
+<tr><td>297</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>能源开发</td><td class='ru'>освоение энергетических ресурсов</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_7'>
+<h2>当代社会 <span class='ru-h2'>Современное общество</span></h2>
+<p class='desc'><span class='n'>21</span> 条三级话题 | 21 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>298</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>环境保护</td><td class='ru'>охрана окружающей среды</td></tr>
+<tr><td>299</td><td class='word'>自然与环境</td><td class='ru'>Природа и окружающая среда</td><td>环境</td><td class='ru'>Окружающая среда</td><td>基础设施</td><td class='ru'>инфраструктура</td></tr>
+<tr><td>300</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科技发展</td><td class='ru'>Развитие науки и техники</td><td>生活类科技产品</td><td class='ru'>технологические товары для повседневной жизни</td></tr>
+<tr><td>301</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科技发展</td><td class='ru'>Развитие науки и техники</td><td>信息科技产品</td><td class='ru'>продукты информационных технологий</td></tr>
+<tr><td>302</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科普知识</td><td class='ru'>научно-популярные знания</td></tr>
+<tr><td>303</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科研成果</td><td class='ru'>научные достижения</td></tr>
+<tr><td>304</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>科学知识</td><td class='ru'>Научные знания</td><td>科普工作</td><td class='ru'>научно-просветительская работа</td></tr>
+<tr><td>305</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>商贸活动</td><td class='ru'>коммерческая и торговая деятельность</td></tr>
+<tr><td>306</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>投资理财</td><td class='ru'>инвестиции и управление финансами</td></tr>
+<tr><td>307</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>财务与消费</td><td class='ru'>финансы и потребление</td></tr>
+<tr><td>308</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>经济现象</td><td class='ru'>Экономические явления</td><td>经济发展</td><td class='ru'>экономическое развитие</td></tr>
+<tr><td>309</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>民生发展</td><td class='ru'>развитие благосостояния народа</td></tr>
+<tr><td>310</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>新兴事物</td><td class='ru'>новые явления; новинки</td></tr>
+<tr><td>311</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>潮流风气</td><td class='ru'>модные тенденции; веяния времени</td></tr>
+<tr><td>312</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>公益活动</td><td class='ru'>благотворительные (общественные) мероприятия</td></tr>
+<tr><td>313</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>社会现象</td><td class='ru'>Общественные явления</td><td>新闻热点</td><td class='ru'>горячие новости; актуальные темы</td></tr>
+<tr><td>314</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺形式</td><td class='ru'>формы литературы и искусства</td></tr>
+<tr><td>315</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺常识</td><td class='ru'>общие знания о литературе и искусстве</td></tr>
+<tr><td>316</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>创作者及其作品</td><td class='ru'>творцы и их произведения</td></tr>
+<tr><td>317</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>文艺</td><td class='ru'>Литература и искусство</td><td>文艺活动</td><td class='ru'>литературно-художественные мероприятия</td></tr>
+<tr><td>318</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>运动项目</td><td class='ru'>виды спорта</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_8'>
+<h2>科学技术 <span class='ru-h2'>Наука и техника</span></h2>
+<p class='desc'><span class='n'>58</span> 条三级话题 | 58 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>319</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育赛事</td><td class='ru'>спортивные события; турниры</td></tr>
+<tr><td>320</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>体育</td><td class='ru'>Спорт; физкультура</td><td>体育名人、体育故事等</td><td class='ru'>знаменитые спортсмены, спортивные истории и другое</td></tr>
+<tr><td>321</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>中外交流</td><td class='ru'>Международный обмен (Китай и зарубежье)</td><td>国际活动</td><td class='ru'>международные мероприятия</td></tr>
+<tr><td>322</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>中外交流</td><td class='ru'>Международный обмен (Китай и зарубежье)</td><td>友好交流事件</td><td class='ru'>события дружественного обмена</td></tr>
+<tr><td>323</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>语言文字</td><td class='ru'>Язык и письменность</td><td>古诗词</td><td class='ru'>классическая поэзия</td></tr>
+<tr><td>324</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>语言文字</td><td class='ru'>Язык и письменность</td><td>成语、俗语、方言等</td><td class='ru'>идиомы (чэнъюй), поговорки, диалекты и т.п.</td></tr>
+<tr><td>325</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>传统节日与习俗</td><td class='ru'>традиционные праздники и обычаи</td></tr>
+<tr><td>326</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>民间传说</td><td class='ru'>народные легенды</td></tr>
+<tr><td>327</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>民俗传统</td><td class='ru'>Народные обычаи и традиции</td><td>古代生活</td><td class='ru'>жизнь в древности</td></tr>
+<tr><td>328</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>人文景观</td><td class='ru'>Культурные достопримечательности</td><td>名胜古迹、传统民居、建筑等</td><td class='ru'>достопримечательности, традиционные жилища, архитектура и т.п.</td></tr>
+<tr><td>329</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统思想与艺术</td><td class='ru'>Традиционная мысль и искусство</td><td>哲学思想</td><td class='ru'>философская мысль</td></tr>
+<tr><td>330</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统思想与艺术</td><td class='ru'>Традиционная мысль и искусство</td><td>传统艺术</td><td class='ru'>традиционное искусство</td></tr>
+<tr><td>331</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>传统思想与艺术</td><td class='ru'>Традиционная мысль и искусство</td><td>传统审美意象</td><td class='ru'>традиционные эстетические образы</td></tr>
+<tr><td>332</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>历史人物、器物与事件</td><td class='ru'>исторические личности, предметы и события</td></tr>
+<tr><td>333</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>朝代概况</td><td class='ru'>общие сведения о династиях</td></tr>
+<tr><td>334</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>古代科技</td><td class='ru'>Древняя наука и техника</td><td>古代科技成就</td><td class='ru'>достижения древней науки и техники</td></tr>
+<tr><td>335</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>古代科技</td><td class='ru'>Древняя наука и техника</td><td>古人科学观念、古代科学家事迹</td><td class='ru'>научные представления древних, деятельность древних учёных</td></tr>
+<tr><td>336</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人际交往</td><td class='ru'>Межличностное общение</td><td>人际关系</td><td class='ru'>межличностные отношения</td></tr>
+<tr><td>337</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人际交往</td><td class='ru'>Межличностное общение</td><td>中国人际交往中的品行观念和评价</td><td class='ru'>представления о морали и оценка поведения в китайском общении</td></tr>
+<tr><td>338</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>形象服饰</td><td class='ru'>Внешний вид и одежда</td><td>不同文化和场合符合礼仪的形象</td><td class='ru'>внешний вид, соответствующий нормам этикета в разных культурах и ситуациях</td></tr>
+<tr><td>339</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>形象服饰</td><td class='ru'>Внешний вид и одежда</td><td>服饰搭配与风格</td><td class='ru'>подбор одежды и стиль</td></tr>
+<tr><td>340</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>形象服饰</td><td class='ru'>Внешний вид и одежда</td><td>中式服装特点与审美</td><td class='ru'>особенности китайского костюма и эстетика</td></tr>
+<tr><td>341</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>饮食餐饮</td><td class='ru'>Питание и ресторанный бизнес</td><td>具有代表性的中国饮食观念、烹饪方法</td><td class='ru'>представительные китайские представления о еде и методы приготовления</td></tr>
+<tr><td>342</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>饮食餐饮</td><td class='ru'>Питание и ресторанный бизнес</td><td>多样化的地域饮食特色</td><td class='ru'>разнообразные особенности региональной кухни</td></tr>
+<tr><td>343</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>饮食餐饮</td><td class='ru'>Питание и ресторанный бизнес</td><td>各种餐饮形态的特点和代表品种</td><td class='ru'>особенности различных форм общепита и характерные блюда</td></tr>
+<tr><td>344</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>饮食餐饮</td><td class='ru'>Питание и ресторанный бизнес</td><td>中国餐桌文化及含义</td><td class='ru'>китайская застольная культура и её значение</td></tr>
+<tr><td>345</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>建筑与社区</td><td class='ru'>Архитектура и сообщество</td><td>建筑与社区文化</td><td class='ru'>архитектура и культура сообщества</td></tr>
+<tr><td>346</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>建筑与社区</td><td class='ru'>Архитектура и сообщество</td><td>社区空间、设施的规划与建设</td><td class='ru'>планирование и строительство общественных пространств и объектов</td></tr>
+<tr><td>347</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>建筑与社区</td><td class='ru'>Архитектура и сообщество</td><td>建筑功能设计与建设</td><td class='ru'>функциональное проектирование и строительство зданий</td></tr>
+<tr><td>348</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>建筑与社区</td><td class='ru'>Архитектура и сообщество</td><td>房屋买卖与租赁</td><td class='ru'>купля-продажа и аренда жилья</td></tr>
+<tr><td>349</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>休闲娱乐</td><td class='ru'>Отдых и развлечения</td><td>旅游度假</td><td class='ru'>путешествия и отдых</td></tr>
+<tr><td>350</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>休闲娱乐</td><td class='ru'>Отдых и развлечения</td><td>运动健身</td><td class='ru'>спорт и фитнес</td></tr>
+<tr><td>351</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>休闲娱乐</td><td class='ru'>Отдых и развлечения</td><td>文化娱乐</td><td class='ru'>культура и развлечения</td></tr>
+<tr><td>352</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>休闲娱乐</td><td class='ru'>Отдых и развлечения</td><td>购物休闲</td><td class='ru'>шопинг и досуг</td></tr>
+<tr><td>353</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>学业职业</td><td class='ru'>Учёба и профессия</td><td>专业学习</td><td class='ru'>профессиональное обучение</td></tr>
+<tr><td>354</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>学业职业</td><td class='ru'>Учёба и профессия</td><td>学业发展与生涯规划</td><td class='ru'>учебное развитие и планирование карьеры</td></tr>
+<tr><td>355</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>学业职业</td><td class='ru'>Учёба и профессия</td><td>职业发展</td><td class='ru'>профессиональное развитие</td></tr>
+<tr><td>356</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>人口流动与管理</td><td class='ru'>миграция населения и управление ею</td></tr>
+<tr><td>357</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>老龄化</td><td class='ru'>старение населения</td></tr>
+<tr><td>358</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>人口发展</td><td class='ru'>развитие населения; демографическое развитие</td></tr>
+<tr><td>359</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>教育政策</td><td class='ru'>образовательная политика</td></tr>
+<tr><td>360</td><td class='word'>个体与社会</td><td class='ru'>Личность и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>高等教育体制</td><td class='ru'>система высшего образования</td></tr>
+<tr><td>361</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>人口与发展</td><td class='ru'>Население и развитие</td><td>教育高质量发展</td><td class='ru'>высококачественное развитие образования</td></tr>
+<tr><td>362</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>媒介与传播</td><td class='ru'>СМИ и коммуникация</td><td>正式表达与非正式表达</td><td class='ru'>официальное и неофициальное выражение</td></tr>
+<tr><td>363</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>媒介与传播</td><td class='ru'>СМИ и коммуникация</td><td>媒介与信息传播</td><td class='ru'>средства массовой информации и распространение информации</td></tr>
+<tr><td>364</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>媒介与传播</td><td class='ru'>СМИ и коммуникация</td><td>数字媒介素养</td><td class='ru'>цифровая и медиаграмотность</td></tr>
+<tr><td>365</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>媒介与传播</td><td class='ru'>СМИ и коммуникация</td><td>知识共享与版权保护</td><td class='ru'>обмен знаниями и защита авторских прав</td></tr>
+<tr><td>366</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>健康与医疗</td><td class='ru'>Здоровье и медицина</td><td>疾病诊疗与公共卫生</td><td class='ru'>диагностика и лечение болезней, общественное здравоохранение</td></tr>
+<tr><td>367</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>健康与医疗</td><td class='ru'>Здоровье и медицина</td><td>心理健康与心理治疗</td><td class='ru'>психическое здоровье и психотерапия</td></tr>
+<tr><td>368</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>健康与医疗</td><td class='ru'>Здоровье и медицина</td><td>医学技术创新与伦理</td><td class='ru'>инновации в медицине и этика</td></tr>
+<tr><td>369</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>健康与医疗</td><td class='ru'>Здоровье и медицина</td><td>中医和西医</td><td class='ru'>традиционная китайская и западная медицина</td></tr>
+<tr><td>370</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>交通与运输</td><td class='ru'>Транспорт и перевозки</td><td>交通运输系统建设和影响</td><td class='ru'>строительство транспортной системы и её влияние</td></tr>
+<tr><td>371</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>交通与运输</td><td class='ru'>Транспорт и перевозки</td><td>各种运输方式的特点和发展趋势</td><td class='ru'>особенности и тенденции развития различных видов транспорта</td></tr>
+<tr><td>372</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>交通与运输</td><td class='ru'>Транспорт и перевозки</td><td>城市交通系统规划与发展</td><td class='ru'>планирование и развитие городской транспортной системы</td></tr>
+<tr><td>373</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>宏观经济</td><td class='ru'>макроэкономика</td></tr>
+<tr><td>374</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>产业发展</td><td class='ru'>развитие отраслей промышленности</td></tr>
+<tr><td>375</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>农、林、牧、渔业生产</td><td class='ru'>сельское, лесное, животноводческое и рыбное производство</td></tr>
+<tr><td>376</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>工业生产</td><td class='ru'>промышленное производство</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_9'>
+<h2>个体与社会 <span class='ru-h2'>Личность и общество</span></h2>
+<p class='desc'><span class='n'>25</span> 条三级话题 | 25 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>377</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>金融服务贸易</td><td class='ru'>финансовые услуги и торговля</td></tr>
+<tr><td>378</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>经济与生产</td><td class='ru'>Экономика и производство</td><td>企业运营</td><td class='ru'>деятельность предприятия; управление бизнесом</td></tr>
+<tr><td>379</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>法制与治安</td><td class='ru'>Законодательство и общественный порядок</td><td>法制建设</td><td class='ru'>строительство правовой системы</td></tr>
+<tr><td>380</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>法制与治安</td><td class='ru'>Законодательство и общественный порядок</td><td>治安管理</td><td class='ru'>поддержание общественного порядка</td></tr>
+<tr><td>381</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>社会保障</td><td class='ru'>социальное обеспечение</td></tr>
+<tr><td>382</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>劳动就业</td><td class='ru'>занятость и трудоустройство</td></tr>
+<tr><td>383</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>公共基础设施建设</td><td class='ru'>строительство общественной инфраструктуры</td></tr>
+<tr><td>384</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>社会公共组织</td><td class='ru'>общественные организации</td></tr>
+<tr><td>385</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>社会基层治理</td><td class='ru'>управление на низовом уровне общества</td></tr>
+<tr><td>386</td><td class='word'>国家与社会</td><td class='ru'>Государство и общество</td><td>社会公共管理</td><td class='ru'>Общественное управление</td><td>中国传统文化意象及在不同文学艺术形式中的表现</td><td class='ru'>образы традиционной китайской культуры и их воплощение в разных видах литературы и искусства</td></tr>
+<tr><td>387</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>文学艺术</td><td class='ru'>Литература и искусство</td><td>不同文学形式的特点和作品欣赏</td><td class='ru'>особенности различных литературных форм и восприятие произведений</td></tr>
+<tr><td>388</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>文学艺术</td><td class='ru'>Литература и искусство</td><td>不同艺术形式的特点和作品欣赏</td><td class='ru'>особенности различных видов искусства и восприятие</td></tr>
+<tr><td>389</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>中国历史发展基本脉络</td><td class='ru'>основные этапы развития китайской истории</td></tr>
+<tr><td>390</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>历史</td><td class='ru'>История</td><td>中国重大历史事件和历史人物</td><td class='ru'>значительные исторические события и деятели Китая</td></tr>
+<tr><td>391</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>哲学思想</td><td class='ru'>Философская мысль; философия</td><td>儒家主要思想、代表人物和影响</td><td class='ru'>основные идеи конфуцианства, его представители и влияние</td></tr>
+<tr><td>392</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>哲学思想</td><td class='ru'>Философская мысль; философия</td><td>道家主要思想、代表人物和影响</td><td class='ru'>основные идеи даосизма, его представители и влияние</td></tr>
+<tr><td>393</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>习俗礼俗</td><td class='ru'>Обычаи и этикет</td><td>农历岁时节令习俗</td><td class='ru'>обычаи, связанные с лунным календарём и сезонами</td></tr>
+<tr><td>394</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>习俗礼俗</td><td class='ru'>Обычаи и этикет</td><td>节庆习俗</td><td class='ru'>праздничные обычаи</td></tr>
+<tr><td>395</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>习俗礼俗</td><td class='ru'>Обычаи и этикет</td><td>婚嫁习俗</td><td class='ru'>свадебные обычаи</td></tr>
+<tr><td>396</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>习俗礼俗</td><td class='ru'>Обычаи и этикет</td><td>生日习俗</td><td class='ru'>обычаи празднования дня рождения</td></tr>
+<tr><td>397</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>习俗礼俗</td><td class='ru'>Обычаи и этикет</td><td>丧葬习俗</td><td class='ru'>похоронные обычаи</td></tr>
+<tr><td>398</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>文化遗产</td><td class='ru'>Культурное наследие</td><td>中国重要的人类物质文化遗产及影响</td><td class='ru'>важные объекты материального культурного наследия Китая и их влияние</td></tr>
+<tr><td>399</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>文化遗产</td><td class='ru'>Культурное наследие</td><td>中国重要的人类非物质文化遗产及影响</td><td class='ru'>важные объекты нематериального культурного наследия Китая и их влияние</td></tr>
+<tr><td>400</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>文化遗产</td><td class='ru'>Культурное наследие</td><td>文化遗产保护、传承与发扬</td><td class='ru'>охрана, наследование и развитие культурного наследия</td></tr>
+<tr><td>401</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>宇宙环境</td><td class='ru'>Космическая среда; Вселенная</td><td>宇宙的起源与演化</td><td class='ru'>происхождение и эволюция Вселенной</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+<div class='section' id='lv_10'>
+<h2>国家与社会 <span class='ru-h2'>Государство и общество</span></h2>
+<p class='desc'><span class='n'>26</span> 条三级话题 | 26 подтем</p>
+<div class='tbl-wrap'><table>
+<thead><tr><th style='width:5%'>序号</th><th style='width:12%'>一级话题</th><th style='width:13%'>一级话题（俄语）</th><th style='width:16%'>二级话题</th><th style='width:16%'>二级话题（俄语）</th><th style='width:18%'>三级话题</th><th style='width:20%'>三级话题（俄语）</th></tr></thead>
+<tbody>
+<tr><td>402</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>宇宙环境</td><td class='ru'>Космическая среда; Вселенная</td><td>宇宙的结构与物质</td><td class='ru'>строение и материя Вселенной</td></tr>
+<tr><td>403</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>宇宙环境</td><td class='ru'>Космическая среда; Вселенная</td><td>人类的太空探索与发现</td><td class='ru'>освоение и открытия космоса человечеством</td></tr>
+<tr><td>404</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>地质环境</td><td class='ru'>Геологическая среда; земная кора</td><td>地球构造</td><td class='ru'>строение Земли</td></tr>
+<tr><td>405</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>地质环境</td><td class='ru'>Геологическая среда; земная кора</td><td>地形、地势、地貌特点</td><td class='ru'>особенности рельефа и ландшафта</td></tr>
+<tr><td>406</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>地质环境</td><td class='ru'>Геологическая среда; земная кора</td><td>地形、地势对经济、人文活动的影响</td><td class='ru'>влияние рельефа на экономическую и культурную деятельность</td></tr>
+<tr><td>407</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>地质环境</td><td class='ru'>Геологическая среда; земная кора</td><td>矿产资源</td><td class='ru'>полезные ископаемые</td></tr>
+<tr><td>408</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>大气环境</td><td class='ru'>Атмосферная среда</td><td>不同气候类型</td><td class='ru'>различные типы климата</td></tr>
+<tr><td>409</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>大气环境</td><td class='ru'>Атмосферная среда</td><td>气候变化</td><td class='ru'>изменение климата</td></tr>
+<tr><td>410</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>大气环境</td><td class='ru'>Атмосферная среда</td><td>大气监测</td><td class='ru'>мониторинг атмосферы</td></tr>
+<tr><td>411</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>水环境</td><td class='ru'>Водная среда</td><td>水资源分布和利用</td><td class='ru'>распределение и использование водных ресурсов</td></tr>
+<tr><td>412</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>水环境</td><td class='ru'>Водная среда</td><td>水生态保护与可持续发展</td><td class='ru'>охрана водной экосистемы и устойчивое развитие</td></tr>
+<tr><td>413</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>土地环境</td><td class='ru'>Земельные ресурсы; почвенная среда</td><td>土地资源分布和利用</td><td class='ru'>распределение и использование земельных ресурсов</td></tr>
+<tr><td>414</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>土地环境</td><td class='ru'>Земельные ресурсы; почвенная среда</td><td>土地资源保护与可持续发展</td><td class='ru'>охрана земельных ресурсов и устойчивое развитие</td></tr>
+<tr><td>415</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>生物环境</td><td class='ru'>Биологическая среда</td><td>生物资源分布特点和利用</td><td class='ru'>особенности распределения биологических ресурсов и их использование</td></tr>
+<tr><td>416</td><td class='word'>文化与传统</td><td class='ru'>Культура и традиции</td><td>生物环境</td><td class='ru'>Биологическая среда</td><td>生物资源保护与可持续发展</td><td class='ru'>охрана биологических ресурсов и устойчивое развитие</td></tr>
+<tr><td>417</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>信息科学技术</td><td class='ru'>Информационные науки и технологии</td><td>计算机科学</td><td class='ru'>компьютерные науки</td></tr>
+<tr><td>418</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>信息科学技术</td><td class='ru'>Информационные науки и технологии</td><td>网络通信技术</td><td class='ru'>интернет-технологии и связь</td></tr>
+<tr><td>419</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>信息科学技术</td><td class='ru'>Информационные науки и технологии</td><td>大数据与数据分析</td><td class='ru'>большие данные и анализ данных</td></tr>
+<tr><td>420</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>信息科学技术</td><td class='ru'>Информационные науки и технологии</td><td>人工智能与机器学习</td><td class='ru'>искусственный интеллект и машинное обучение</td></tr>
+<tr><td>421</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>航空航天科学技术</td><td class='ru'>Авиационно-космические науки и технологии</td><td>航天航空科技</td><td class='ru'>космическая и авиационная техника</td></tr>
+<tr><td>422</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>航空航天科学技术</td><td class='ru'>Авиационно-космические науки и технологии</td><td>航空航天技术应用</td><td class='ru'>применение аэрокосмических технологий</td></tr>
+<tr><td>423</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>生物科学技术</td><td class='ru'>Биологические науки и технологии</td><td>生物科技与农业</td><td class='ru'>биотехнологии и сельское хозяйство</td></tr>
+<tr><td>424</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>生物科学技术</td><td class='ru'>Биологические науки и технологии</td><td>生物科技与环保</td><td class='ru'>биотехнологии и охрана окружающей среды</td></tr>
+<tr><td>425</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>生物科学技术</td><td class='ru'>Биологические науки и технологии</td><td>生物科技与医疗</td><td class='ru'>биотехнологии и медицина</td></tr>
+<tr><td>426</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>其他新兴科学技术</td><td class='ru'>Прочие новые науки и технологии</td><td>先进材料与制造</td><td class='ru'>передовые материалы и производство</td></tr>
+<tr><td>427</td><td class='word'>科学技术</td><td class='ru'>Наука и техника</td><td>其他新兴科学技术</td><td class='ru'>Прочие новые науки и технологии</td><td>可再生能源技术</td><td class='ru'>технологии возобновляемой энергии</td></tr>
+</tbody></table></div>
+<a class='back-top' href='#toc'>↑ 返回目录 | Наверх</a>
+</div>
+</div>
+<script>
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.style.opacity='1';clearTimeout(t._h);t._h=setTimeout(function(){t.style.opacity='0';},2600);}
+function savePdf(){showToast('正在保存PDF，请在打印对话框中选择“另存为PDF”');setTimeout(function(){window.print();},500);}
+</script>
+</body>
+</html>
